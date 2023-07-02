@@ -1,6 +1,3 @@
-run-dist:
-	make -C app run-dist
-
 build:
 	make -C app build
 
@@ -9,3 +6,6 @@ run:
 
 install:
 	make -C app install
+
+check:
+	make -C app check

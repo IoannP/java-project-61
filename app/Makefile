@@ -1,11 +1,11 @@
-run-dist:
-	./build/install/app/bin/app
-
 build:
 	gradle clean build
 
 run:
-	gradle run
+	./build/install/app/bin/app
 
 install:
 	gradle clean install
+
+check:
+	gradle check
