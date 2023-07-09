@@ -1,11 +1,7 @@
 package hexlet.code.games;
-import java.util.Random;
-
+import hexlet.code.Utils;
 
 public class Even implements Game  {
-    private static int min = 1;
-    private static int max = 100;
-
     private boolean isEven(int number) {
         return number % 2 == 0;
     }
@@ -20,7 +16,7 @@ public class Even implements Game  {
     }
 
     public String generateQuestion() {
-        int number = new Random().nextInt(Even.min, Even.max);
+        int number = Utils.generateRandomNumber();
         return Integer.toString(number); 
     }
 }

@@ -1,23 +1,10 @@
 package hexlet.code.games;
-import java.util.Random;
-
+import hexlet.code.Utils;
 
 public class Calc implements Game {
-    private static int min = 1;
-    private static int max = 100;
-
-    private static int generateRandomNumber(int min, int max) {
-        Random random = new Random();
-        return random.nextInt(min, max);   
-    }
-  
-    private static int generateRandomNumber() {
-        Random random = new Random();
-        return random.nextInt(Calc.min, Calc.max);   
-    }
 
     private static String getSign() {
-      int number = Calc.generateRandomNumber(1, 4);
+      int number = Utils.generateRandomNumber(1, 4);
       switch (number) {
           case 1:
               return "+";
@@ -56,8 +43,8 @@ public class Calc implements Game {
     }
 
     public String generateQuestion() {
-        int firstOperand = Calc.generateRandomNumber();
-        int secondOperand = Calc.generateRandomNumber();
+        int firstOperand = Utils.generateRandomNumber();
+        int secondOperand = Utils.generateRandomNumber();
         String operator = Calc.getSign();
 
         String expression = String.format("%s %s %s", firstOperand, operator, secondOperand);
