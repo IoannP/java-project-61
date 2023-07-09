@@ -4,6 +4,7 @@ import hexlet.code.games.Even;
 import hexlet.code.games.Calc;
 import hexlet.code.games.GCD;
 import hexlet.code.games.Progression;
+import hexlet.code.games.Prime;
 import hexlet.code.games.Game;
 
 public class Engine {
@@ -29,6 +30,10 @@ public class Engine {
             case "5":
                 Game progressionGame = new Progression();
                 Engine.run(progressionGame);
+                break;
+            case "6":
+                Game primeGame = new Prime();
+                Engine.run(primeGame);
                 break;
             default:
                 return;
