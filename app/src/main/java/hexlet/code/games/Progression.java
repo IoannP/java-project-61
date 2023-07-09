@@ -21,7 +21,7 @@ public class Progression implements Game {
                 continue;
             }
 
-            if (i != progressionLength - 2) {
+            if (i < progressionLength - 2) {
                 int step = Integer.parseInt(progression[i + 2]) - Integer.parseInt(progression[i + 1]);
                 answer = Integer.parseInt(progression[i + 1]) - step;
                 return Integer.toString(answer);
