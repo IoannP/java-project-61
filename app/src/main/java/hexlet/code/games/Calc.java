@@ -17,16 +17,14 @@ public class Calc implements Game {
     }
 
     private static String getSign() {
-      int number = Calc.generateRandomNumber(1, 5);
+      int number = Calc.generateRandomNumber(1, 4);
       switch (number) {
           case 1:
               return "+";
           case 2:
               return "-";
-          case 3:
-              return "*";
           default:
-              return "/";
+              return "*";
       }
     }
 
@@ -46,11 +44,8 @@ public class Calc implements Game {
           case "-":
               result = firstOperand - secondOperand;
               break;
-          case "*":
-              result = firstOperand * secondOperand;
-              break;
           default:
-              result = firstOperand / secondOperand;
+              result = firstOperand * secondOperand;
         }
 
         return Integer.toString(result);
