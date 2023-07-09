@@ -2,6 +2,7 @@ package hexlet.code;
 
 import hexlet.code.games.Even;
 import hexlet.code.games.Calc;
+import hexlet.code.games.GCD;
 import hexlet.code.games.Game;
 
 public class Engine {
@@ -19,6 +20,10 @@ public class Engine {
             case "3":
                 Game calcGame = new Calc();
                 Engine.run(calcGame);
+                break;
+            case "4":
+                Game gcdGame = new GCD();
+                Engine.run(gcdGame);
                 break;
             default:
                 return;

@@ -2,7 +2,6 @@ package hexlet.code.games;
 import hexlet.code.Utils;
 
 public class Calc implements Game {
-
     private static String getSign() {
       int number = Utils.generateRandomNumber(1, 4);
       switch (number) {
