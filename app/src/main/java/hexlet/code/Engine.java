@@ -1,6 +1,8 @@
 package hexlet.code;
 
 import hexlet.code.games.Even;
+import hexlet.code.games.Calc;
+import hexlet.code.games.Game;
 
 public class Engine {
     private static int countOfRounds = 3;
@@ -11,15 +13,19 @@ public class Engine {
                 Cli.greet();
                 break;
             case "2":
-                Even evenGame = new Even();
+                Game evenGame = new Even();
                 Engine.run(evenGame);
+                break;
+            case "3":
+                Game calcGame = new Calc();
+                Engine.run(calcGame);
                 break;
             default:
                 return;
         }
     }
 
-    private static void run(Even game) {
+    private static void run(Game game) {
         String name = Cli.greet();
         String rules = game.getRules();
         System.out.println(rules);
