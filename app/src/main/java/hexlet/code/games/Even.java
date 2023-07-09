@@ -17,6 +17,6 @@ public class Even implements Game  {
 
     public String generateQuestion() {
         int number = Utils.generateRandomNumber();
-        return Integer.toString(number); 
+        return Integer.toString(number);
     }
 }

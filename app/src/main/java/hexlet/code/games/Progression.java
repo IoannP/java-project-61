@@ -41,12 +41,12 @@ public class Progression implements Game {
         list[0] = Integer.toString(step);
 
         for (var i = 1; i < 10; i += 1) {
-          int number = step * (i + 1);
-          list[i] = Integer.toString(number);
+            int number = step * (i + 1);
+            list[i] = Integer.toString(number);
         }
 
         list[missingNumberIndex] = "..";
-    
+
         return String.join(" ", list);
     }
 }

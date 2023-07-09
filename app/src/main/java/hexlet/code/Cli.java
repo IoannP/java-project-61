@@ -17,16 +17,15 @@ public class Cli {
         System.out.println("0 - Exit");
 
         System.out.print("Your choice: ");
-        String gameNumber = scanner.next();
+        String gameNumber = Cli.scanner.next();
 
         return gameNumber;
     }
 
     public static String greet() {
         System.out.println("Welcome to the Brain Games!");
-        Scanner scanner = new Scanner(System.in);
         System.out.print("May I have your name? ");
-        String name = scanner.next();
+        String name = Cli.scanner.next();
 
         System.out.println(String.format("Hello, %s!", name));
 

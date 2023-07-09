@@ -17,7 +17,7 @@ public class GCD implements Game {
 
     public String getCorrectAnswer(String question) {
         String[] expression = question.split(" ");
-        
+
         int firstNum = Integer.parseInt(expression[0]);
         int secondNum = Integer.parseInt(expression[1]);
 

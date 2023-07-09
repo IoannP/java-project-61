@@ -3,20 +3,20 @@ import hexlet.code.Utils;
 
 public class Calc implements Game {
     private static String getSign() {
-      int number = Utils.generateRandomNumber(1, 4);
-      switch (number) {
-          case 1:
-              return "+";
-          case 2:
-              return "-";
-          default:
-              return "*";
-      }
+        int number = Utils.generateRandomNumber(1, 4);
+        switch (number) {
+            case 1:
+                return "+";
+            case 2:
+                return "-";
+            default:
+                return "*";
+        }
     }
 
     public String getCorrectAnswer(String question) {
         String[] expression = question.split(" ");
-        
+
         int firstOperand = Integer.parseInt(expression[0]);
         int secondOperand = Integer.parseInt(expression[2]);
         String operator = expression[1];
@@ -24,14 +24,14 @@ public class Calc implements Game {
         int result;
 
         switch (operator) {
-          case "+":
-              result = firstOperand + secondOperand;
-              break;
-          case "-":
-              result = firstOperand - secondOperand;
-              break;
-          default:
-              result = firstOperand * secondOperand;
+            case "+":
+                result = firstOperand + secondOperand;
+                break;
+            case "-":
+                result = firstOperand - secondOperand;
+                break;
+            default:
+                result = firstOperand * secondOperand;
         }
 
         return Integer.toString(result);
