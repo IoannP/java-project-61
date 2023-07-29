@@ -19,7 +19,7 @@ public class Engine {
             String userAnswer = Cli.getAnswer();
 
             if (!answer.equals(userAnswer)) {
-                String message = String.format("'%s' is wrong answer ;(. Correct answer was '%s'.", answer, userAnswer);
+                String message = String.format("'%s' is wrong answer ;(. Correct answer was '%s'.", userAnswer, answer);
                 System.out.println(message);
                 System.out.println(String.format("Let's try again, %s!", playerName));
                 return;
