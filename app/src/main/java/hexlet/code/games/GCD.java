@@ -11,11 +11,19 @@ public class GCD implements Game {
         return getGCD(b, a % b);
     }
 
-
+    /**
+     *
+     * @return game description
+     */
     public String getGameDescription() {
         return "Find the greatest common divisor of given numbers.";
     }
 
+    /**
+     * Get question and evaluate answer.
+     * @param question - question
+     * @return question's answer
+     */
     public String getAnswer(String question) {
         String[] expression = question.split(" ");
 
@@ -27,6 +35,10 @@ public class GCD implements Game {
         return Integer.toString(result);
     }
 
+    /**
+     *
+     * @return game question
+     */
     public String getQuestion() {
         int firstNum = Utils.generateRandomNumber();
         int secondNum = Utils.generateRandomNumber();

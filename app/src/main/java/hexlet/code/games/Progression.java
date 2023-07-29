@@ -9,10 +9,19 @@ public class Progression implements Game {
 
     private static final int PROGRESSION_END_INDEX = 10;
 
+    /**
+     *
+     * @return game description
+     */
     public String getGameDescription() {
         return "What number is missing in the progression?";
     }
 
+    /**
+     * Get question and evaluate answer.
+     * @param question - question
+     * @return question's answer
+     */
     public String getAnswer(String question) {
         String[] progression = question.split(" ");
         int progressionLength = progression.length;
@@ -39,6 +48,10 @@ public class Progression implements Game {
         return "";
     }
 
+    /**
+     *
+     * @return game question
+     */
     public String getQuestion() {
         String[] list = new String[PROGRESSION_END_INDEX];
         int step = Utils.generateRandomNumber();

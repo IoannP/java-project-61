@@ -17,19 +17,28 @@ public class Prime implements Game {
         return true;
     }
 
+    /**
+     *
+     * @return game question
+     */
     public String getGameDescription() {
         return "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
     }
 
     /**
-     *
+     * Get question and evaluate answer.
      * @param question - question
+     * @return question's answer
      */
     public String getAnswer(String question) {
         boolean isPrimeNumber = Prime.isPrime(Integer.parseInt(question));
         return isPrimeNumber ? "yes" : "no";
     }
 
+    /**
+     *
+     * @return game description
+     */
     public String getQuestion() {
         int number = Utils.generateRandomNumber();
         return Integer.toString(number);

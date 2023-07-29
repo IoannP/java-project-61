@@ -5,8 +5,12 @@ import hexlet.code.interfaces.Game;
 
 
 public class Calc implements Game {
+    private static final int MIN_SIGN_NUMBER = 1;
+
+    private static final int MAX_SIGN_NUMBER = 4;
+
     private static String getSign() {
-        int number = Utils.generateRandomNumber(1, 4);
+        int number = Utils.generateRandomNumber(MIN_SIGN_NUMBER, MAX_SIGN_NUMBER);
         switch (number) {
             case 1:
                 return "+";
@@ -17,13 +21,19 @@ public class Calc implements Game {
         }
     }
 
-    /*
-     * @return game description
+    /**
+     *
+     * @return game question
      */
     public String getGameDescription() {
         return "What is the result of the expression?";
     }
 
+    /**
+     * Get question and evaluate answer.
+     * @param question - question
+     * @return question's answer
+     */
     public String getAnswer(String question) {
         String[] expression = question.split(" ");
 
@@ -47,6 +57,10 @@ public class Calc implements Game {
         return Integer.toString(result);
     }
 
+    /**
+     *
+     * @return game question
+     */
     public String getQuestion() {
         int firstOperand = Utils.generateRandomNumber();
         int secondOperand = Utils.generateRandomNumber();
