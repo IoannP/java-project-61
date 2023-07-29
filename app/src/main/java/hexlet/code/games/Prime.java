@@ -9,7 +9,7 @@ public class Prime implements Game {
             return false;
         }
 
-        for (var i = 2; i < Math.sqrt(number); i += 1) {
+        for (var i = 2; i < number / 2; i += 1) {
             if (number % i == 0) {
                 return false;
             }
