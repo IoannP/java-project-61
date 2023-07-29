@@ -3,38 +3,18 @@ import java.util.Scanner;
 
 
 public class Cli {
-    public static Scanner scanner = new Scanner(System.in);
+    private static Scanner scanner = new Scanner(System.in);
 
-    public static String chooseGame() {
-        System.out.println("Please enter the game number and press Enter.");
-        System.out.println("1 - Greet");
-        System.out.println("2 - Even");
-        System.out.println("3 - Calc");
-        System.out.println("4 - GCD");
-        System.out.println("5 - Progression");
-        System.out.println("6 - Prime");
+    public static void closeScanner() {
+        Cli.scanner.close();
+    }
 
-        System.out.println("0 - Exit");
-
+    public static String getGameNumber() {
         System.out.print("Your choice: ");
         String gameNumber = Cli.scanner.next();
 
         return gameNumber;
     }
-
-    public static String greet() {
-        System.out.println("Welcome to the Brain Games!");
-        System.out.print("May I have your name? ");
-        String name = Cli.scanner.next();
-
-        System.out.println(String.format("Hello, %s!", name));
-
-        return name;
-    }
-
-    // public static void printQuestion(void question) {
-    //     System.out.println("Question: " + question);
-    // }
 
     public static String getAnswer() {
         System.out.print("Your answer: ");
@@ -43,7 +23,10 @@ public class Cli {
         return answer;
     }
 
-    // public static void printRules(String rules) {
-    //     System.out.println(rules);
-    // }
+    public static String getPlayerName() {
+        System.out.print("May I have your name? ");
+        String name = Cli.scanner.next();
+
+        return name;
+    }
 }

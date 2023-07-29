@@ -1,5 +1,8 @@
 package hexlet.code.games;
+
 import hexlet.code.Utils;
+import hexlet.code.interfaces.Game;
+
 
 public class Calc implements Game {
     private static String getSign() {
@@ -14,7 +17,14 @@ public class Calc implements Game {
         }
     }
 
-    public String getCorrectAnswer(String question) {
+    /*
+     * @return game description
+     */
+    public String getGameDescription() {
+        return "What is the result of the expression?";
+    }
+
+    public String getAnswer(String question) {
         String[] expression = question.split(" ");
 
         int firstOperand = Integer.parseInt(expression[0]);
@@ -37,17 +47,13 @@ public class Calc implements Game {
         return Integer.toString(result);
     }
 
-    public String getRules() {
-        return "What is the result of the expression?";
-    }
-
-    public String generateQuestion() {
+    public String getQuestion() {
         int firstOperand = Utils.generateRandomNumber();
         int secondOperand = Utils.generateRandomNumber();
         String operator = Calc.getSign();
 
-        String expression = String.format("%s %s %s", firstOperand, operator, secondOperand);
+        String question = String.format("%s %s %s", firstOperand, operator, secondOperand);
 
-        return expression;
+        return question;
     }
 }

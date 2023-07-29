@@ -1,6 +1,7 @@
 package hexlet.code.games;
 
 import hexlet.code.Utils;
+import hexlet.code.interfaces.Game;
 
 public class GCD implements Game {
     private static int getGCD(int a, int b) {
@@ -11,11 +12,11 @@ public class GCD implements Game {
     }
 
 
-    public String getRules() {
+    public String getGameDescription() {
         return "Find the greatest common divisor of given numbers.";
     }
 
-    public String getCorrectAnswer(String question) {
+    public String getAnswer(String question) {
         String[] expression = question.split(" ");
 
         int firstNum = Integer.parseInt(expression[0]);
@@ -26,7 +27,7 @@ public class GCD implements Game {
         return Integer.toString(result);
     }
 
-    public String generateQuestion() {
+    public String getQuestion() {
         int firstNum = Utils.generateRandomNumber();
         int secondNum = Utils.generateRandomNumber();
 

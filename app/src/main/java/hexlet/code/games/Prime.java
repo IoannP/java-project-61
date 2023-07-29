@@ -1,6 +1,7 @@
 package hexlet.code.games;
 
 import hexlet.code.Utils;
+import hexlet.code.interfaces.Game;
 
 public class Prime implements Game {
     private static boolean isPrime(int number) {
@@ -16,16 +17,20 @@ public class Prime implements Game {
         return true;
     }
 
-    public String getRules() {
+    public String getGameDescription() {
         return "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
     }
 
-    public String getCorrectAnswer(String question) {
+    /**
+     *
+     * @param question - question
+     */
+    public String getAnswer(String question) {
         boolean isPrimeNumber = Prime.isPrime(Integer.parseInt(question));
         return isPrimeNumber ? "yes" : "no";
     }
 
-    public String generateQuestion() {
+    public String getQuestion() {
         int number = Utils.generateRandomNumber();
         return Integer.toString(number);
     }

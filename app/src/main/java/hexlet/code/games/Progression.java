@@ -1,14 +1,19 @@
 package hexlet.code.games;
 
 import hexlet.code.Utils;
+import hexlet.code.interfaces.Game;
 
 
 public class Progression implements Game {
-    public String getRules() {
+    private static final int PROGRESSION_BEGIN_INDEX = 0;
+
+    private static final int PROGRESSION_END_INDEX = 10;
+
+    public String getGameDescription() {
         return "What number is missing in the progression?";
     }
 
-    public String getCorrectAnswer(String question) {
+    public String getAnswer(String question) {
         String[] progression = question.split(" ");
         int progressionLength = progression.length;
         int answer;
@@ -34,13 +39,13 @@ public class Progression implements Game {
         return "";
     }
 
-    public String generateQuestion() {
-        String[] list = new String[10];
+    public String getQuestion() {
+        String[] list = new String[PROGRESSION_END_INDEX];
         int step = Utils.generateRandomNumber();
-        int missingNumberIndex = Utils.generateRandomNumber(0, 10);
+        int missingNumberIndex = Utils.generateRandomNumber(PROGRESSION_BEGIN_INDEX, PROGRESSION_END_INDEX);
         list[0] = Integer.toString(step);
 
-        for (var i = 1; i < 10; i += 1) {
+        for (var i = 1; i < PROGRESSION_END_INDEX; i += 1) {
             int number = step * (i + 1);
             list[i] = Integer.toString(number);
         }
